@@ -1,14 +1,14 @@
 <div>
-  <h2 class="vconsole-atzuche-env-title">当前环境:{{ current }}</h2>
+  <h2 class="vconsole-atzuche-env-title">Planet:{{ current }}</h2>
   <div class="vconsole-atzuche-env-panel">
     <div class="at-radio-group at-radio-group-outline">
       {{for(var i in envs)}}
-      <label class="at-radio-wrapper" id="test{{ envs[i] }}">
+      <label class="at-radio-wrapper" id="{{ envs[i] }}">
         <span class="at-radio">
           <input type="radio" class="at-radio-input" value="{{ envs[i] }}" />
           <span class="at-radio-inner"> </span>
         </span>
-        <span> Test{{ envs[i] }} </span>
+        <span> {{ envs[i] }} </span>
       </label>
       {{/for}}
     </div>

@@ -4,9 +4,20 @@ import Cookies from 'js-cookie';
 import tp from './index.html';
 
 const PUGLIN_ID = 'vconsole-atzuche-env';
-const PUGLIN_NAME = '切换环境';
-const COOKIE_ENV_NAME = '__at__env__';
-const envs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const PUGLIN_NAME = 'Planet';
+const COOKIE_ENV_NAME = 'AT_ENVS';
+const envs = [
+  'Sun',
+  'Mercury',
+  'Venus',
+  'Earth',
+  'Mars',
+  'Jupiter',
+  'Saturn',
+  'Uranus',
+  'Neptune',
+  'Pluto'
+];
 let $;
 let parentsNode = [];
 
