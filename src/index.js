@@ -36,8 +36,11 @@ class VConsoleAtzucheEnv extends VConsole.VConsolePlugin {
       console.error('需要VConsole实例');
       return;
     }
+
     this.vConsole = instance;
+
     $ = this.vConsole.$;
+
     this.currentEnv = '';
 
     this.vConsole.addPlugin(this);
