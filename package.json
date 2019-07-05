@@ -1,0 +1,50 @@
+{
+  "name": "vconsole-atzuche-env",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "compile": "webpack",
+    "commit": "git-cz",
+    "release": "standard-version",
+    "publish": "npm run compile && npm publish"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "author": "xingyun.liu@atzuche.com",
+  "license": "ISC",
+  "keywords": [
+    "console",
+    "vconsole-env",
+    "debug",
+    "mobile"
+  ],
+  "dependencies": {
+    "js-cookie": "^2.2.0",
+    "vconsole": "^3.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.1",
+    "@babel/preset-env": "^7.3.1",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "commitizen": "^3.1.1",
+    "copy-webpack-plugin": "^5.0.3",
+    "css-loader": "^2.1.0",
+    "cz-conventional-changelog": "^2.1.0",
+    "html-loader": "^0.5.5",
+    "json-loader": "^0.5.7",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "standard-version": "^6.0.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5"
+  }
+}
