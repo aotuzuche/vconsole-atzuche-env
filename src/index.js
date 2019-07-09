@@ -3,6 +3,9 @@ import VConsole from 'vconsole';
 import Cookies from 'js-cookie';
 import tp from './index.html';
 
+// vconsole实例
+const vConsole = new VConsole();
+
 const PUGLIN_ID = 'vconsole-atzuche-env';
 const PUGLIN_NAME = 'Planet';
 const COOKIE_ENV_NAME = 'AT_ENVS';
@@ -18,8 +21,9 @@ const envs = [
   'Neptune',
   'Pluto'
 ];
-let $;
+let $ = vConsole.$;
 let parentsNode = [];
+let currentEnv = '';
 
 // 查找父节点
 function findParentNode(dom) {
@@ -40,20 +44,15 @@ function findNode(dom) {
 }
 
 class VConsoleAtzucheEnv extends VConsole.VConsolePlugin {
-  constructor(instance, options = {}) {
-    super(PUGLIN_ID, PUGLIN_NAME);
-
-    this.vConsole = new VConsole();
-    $ = this.vConsole.$;
-    this.currentEnv = '';
-    this.vConsole.addPlugin(this);
+  constructor(...args) {
+    super(...args);
   }
 
   // 初始化渲染tab
   onRenderTab(callback) {
     let $dom = (this.$dom = $.render(tp, {
       envs: envs,
-      current: this.currentEnv || Cookies.get(COOKIE_ENV_NAME)
+      current: currentEnv || Cookies.get(COOKIE_ENV_NAME)
     }));
 
     callback($dom);
@@ -71,7 +70,7 @@ class VConsoleAtzucheEnv extends VConsole.VConsolePlugin {
       if (!wrapper) {
         return;
       }
-      this.currentEnv = wrapper.id;
+      currentEnv = wrapper.id;
       this.showEnvInTab();
     });
   }
@@ -81,7 +80,7 @@ class VConsoleAtzucheEnv extends VConsole.VConsolePlugin {
     let button = {
       name: '确定',
       onClick: event => {
-        Cookies.set(COOKIE_ENV_NAME, this.currentEnv);
+        Cookies.set(COOKIE_ENV_NAME, currentEnv);
         location.reload();
       }
     };
@@ -90,7 +89,7 @@ class VConsoleAtzucheEnv extends VConsole.VConsolePlugin {
 
   // 初始化显示当前环境
   initEnv = () => {
-    this.currentEnv = Cookies.get(COOKIE_ENV_NAME);
+    currentEnv = Cookies.get(COOKIE_ENV_NAME);
     this.showEnvInTab();
   };
 
@@ -98,9 +97,10 @@ class VConsoleAtzucheEnv extends VConsole.VConsolePlugin {
   showEnvInTab = () => {
     $.removeClass($.all('.at-radio-wrapper'), 'at-radio-wrapper-checked');
     $.removeClass($.all('.at-radio-wrapper .at-radio'), 'at-radio-checked');
-    $.addClass($.all(`#${this.currentEnv}`), 'at-radio-wrapper-checked');
-    $.addClass($.all(`#${this.currentEnv} .at-radio`), 'at-radio-checked ');
+    $.addClass($.all(`#${currentEnv}`), 'at-radio-wrapper-checked');
+    $.addClass($.all(`#${currentEnv} .at-radio`), 'at-radio-checked ');
   };
 }
 
-export default VConsoleAtzucheEnv;
+const env = new VConsoleAtzucheEnv(PUGLIN_ID, PUGLIN_NAME);
+vConsole.addPlugin(env);
