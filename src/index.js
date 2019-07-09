@@ -43,17 +43,9 @@ class VConsoleAtzucheEnv extends VConsole.VConsolePlugin {
   constructor(instance, options = {}) {
     super(PUGLIN_ID, PUGLIN_NAME);
 
-    if (!instance) {
-      console.error('需要VConsole实例');
-      return;
-    }
-
-    this.vConsole = instance;
-
+    this.vConsole = new VConsole();
     $ = this.vConsole.$;
-
     this.currentEnv = '';
-
     this.vConsole.addPlugin(this);
   }
 
@@ -111,4 +103,4 @@ class VConsoleAtzucheEnv extends VConsole.VConsolePlugin {
   };
 }
 
-module.exports = VConsoleAtzucheEnv;
+export default VConsoleAtzucheEnv;
