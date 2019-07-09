@@ -102,5 +102,7 @@ class VConsoleAtzucheEnv extends VConsole.VConsolePlugin {
   };
 }
 
+export default VConsoleAtzucheEnv;
+
 const env = new VConsoleAtzucheEnv(PUGLIN_ID, PUGLIN_NAME);
 vConsole.addPlugin(env);
