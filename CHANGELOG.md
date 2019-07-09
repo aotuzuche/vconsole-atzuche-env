@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://10.0.3.254///compare/v1.2.0...v1.2.1) (2019-07-09)
+
+
+### Bug Fixes
+
+* 🐛 debugger ([7d28d00](https://10.0.3.254///commit/7d28d00))
+
+
+
 ## [1.2.0](https://10.0.3.254///compare/v1.1.10...v1.2.0) (2019-07-09)
 
 
