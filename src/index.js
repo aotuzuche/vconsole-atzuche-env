@@ -111,4 +111,4 @@ class VConsoleAtzucheEnv extends VConsole.VConsolePlugin {
   };
 }
 
-export default VConsoleAtzucheEnv;
+module.exports = VConsoleAtzucheEnv;
