@@ -1,7 +1,6 @@
 const pkg = require('./package.json');
 const Webpack = require('webpack');
 const Path = require('path');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -34,12 +33,5 @@ module.exports = {
   },
   stats: {
     colors: true
-  },
-  plugins: [
-    new Webpack.BannerPlugin(
-      ['vConsole-atzuche-env v' + pkg.version + ' (' + pkg.homepage + ')'].join(
-        '\n'
-      )
-    )
-  ]
+  }
 };
