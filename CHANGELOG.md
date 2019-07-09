@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.6](https://10.0.3.254///compare/v1.1.5...v1.1.6) (2019-07-09)
+
+
+### Bug Fixes
+
+* 循环引用问题 ([f3a7402](https://10.0.3.254///commit/f3a7402))
+
+
+
 ### [1.1.5](https://10.0.3.254///compare/v1.1.4...v1.1.5) (2019-07-09)
 
 
