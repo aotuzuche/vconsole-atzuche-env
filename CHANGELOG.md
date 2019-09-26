@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://10.0.3.254///compare/v1.3.6...v1.4.0) (2019-09-26)
+
+
+### Features
+
+* 🎸 version ([be481d7](https://10.0.3.254///commit/be481d7))
+
+
+
 ### [1.3.6](https://10.0.3.254///compare/v1.3.2...v1.3.6) (2019-09-26)
 
 
