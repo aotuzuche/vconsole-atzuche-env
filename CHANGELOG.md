@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.5](https://10.0.3.254///compare/v1.4.4...v1.4.5) (2019-09-26)
+
+
+### Bug Fixes
+
+* 🐛 构建配置错误 ([5c913b2](https://10.0.3.254///commit/5c913b2))
+
+
+
 ### [1.4.2](https://10.0.3.254///compare/v1.4.0...v1.4.2) (2019-09-26)
 
 
