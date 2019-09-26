@@ -10,5 +10,6 @@ yarn add vconsole-atzuche-env -D
 ## 使用
 
 ```js
-import 'vconsole-atzuche-env';
+import VConsoleAtzucheEnv from 'vconsole-atzuche-env';
+new VConsoleAtzucheEnv();
 ```
