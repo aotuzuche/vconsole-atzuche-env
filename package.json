@@ -1,6 +1,6 @@
 {
   "name": "vconsole-atzuche-env",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
