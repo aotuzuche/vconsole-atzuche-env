@@ -7,7 +7,7 @@
     "compile": "webpack",
     "commit": "git-cz",
     "release": "standard-version",
-    "publish": "git push --follow-tags origin master && npm publish"
+    "np": "np --yolo --no-yarn"
   },
   "config": {
     "commitizen": {
