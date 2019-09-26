@@ -5,10 +5,9 @@ import tp from './index.html';
 
 // vconsole实例
 const vConsole = new VConsole();
-
 const PUGLIN_ID = 'vconsole-atzuche-env';
 const PUGLIN_NAME = 'Planet';
-const COOKIE_ENV_NAME = 'AT_ENVS';
+const COOKIE_ENV_NAME = '_app_vconsole_envname_';
 const envs = [
   'Sun',
   'Mercury',
@@ -21,7 +20,7 @@ const envs = [
   'Neptune',
   'Pluto'
 ];
-let $ = vConsole.$;
+const $ = vConsole.$;
 let parentsNode = [];
 let currentEnv = '';
 
@@ -44,8 +43,9 @@ function findNode(dom) {
 }
 
 class VConsoleAtzucheEnv extends VConsole.VConsolePlugin {
-  constructor(...args) {
-    super(...args);
+  constructor() {
+    super(PUGLIN_ID, PUGLIN_NAME);
+    vConsole.addPlugin(this);
   }
 
   // 初始化渲染tab
@@ -66,7 +66,6 @@ class VConsoleAtzucheEnv extends VConsole.VConsolePlugin {
       const wrapper = parentsNode.find(item => {
         return item.className.includes('at-radio-wrapper');
       });
-
       if (!wrapper) {
         return;
       }
@@ -76,34 +75,30 @@ class VConsoleAtzucheEnv extends VConsole.VConsolePlugin {
   }
 
   // 底部添加确定按钮
-  onAddTool = callback => {
+  onAddTool(callback) {
     let button = {
       name: '确定',
-      onClick: event => {
+      onClick(event) {
         Cookies.set(COOKIE_ENV_NAME, currentEnv);
         location.reload();
       }
     };
     callback([button]);
-  };
+  }
 
   // 初始化显示当前环境
-  initEnv = () => {
+  initEnv() {
     currentEnv = Cookies.get(COOKIE_ENV_NAME);
     this.showEnvInTab();
-  };
+  }
 
   // 更新显示环境的ui
-  showEnvInTab = () => {
+  showEnvInTab() {
     $.removeClass($.all('.at-radio-wrapper'), 'at-radio-wrapper-checked');
     $.removeClass($.all('.at-radio-wrapper .at-radio'), 'at-radio-checked');
     $.addClass($.all(`#${currentEnv}`), 'at-radio-wrapper-checked');
     $.addClass($.all(`#${currentEnv} .at-radio`), 'at-radio-checked ');
-  };
+  }
 }
 
 export default VConsoleAtzucheEnv;
-
-const env = new VConsoleAtzucheEnv(PUGLIN_ID, PUGLIN_NAME);
-vConsole.addPlugin(env);
-
