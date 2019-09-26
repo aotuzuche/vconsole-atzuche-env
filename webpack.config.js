@@ -10,11 +10,11 @@ module.exports = {
   },
   output: {
     path: Path.resolve(__dirname, './dist'),
-    filename: 'index.js'
-    // library: 'VConsoleAtzucheEnv',
-    // libraryTarget: 'umd',
-    // umdNamedDefine: true,
-    // globalObject: 'this'
+    filename: 'index.js',
+    library: 'VConsoleAtzucheEnv',
+    libraryTarget: 'umd',
+    umdNamedDefine: true,
+    globalObject: 'this'
   },
   module: {
     rules: [
