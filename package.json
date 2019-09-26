@@ -1,12 +1,13 @@
 {
   "name": "vconsole-atzuche-env",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
     "compile": "webpack",
     "commit": "git-cz",
-    "release": "standard-version"
+    "release": "standard-version",
+    "publish": "git push --follow-tags origin master && npm publish"
   },
   "config": {
     "commitizen": {
