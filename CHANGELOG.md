@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.2](https://10.0.3.254///compare/v1.4.0...v1.4.2) (2019-09-26)
+
+
+### Tests
+
+* 💍 sds ([cd4e917](https://10.0.3.254///commit/cd4e917))
+
+
+
 ## [1.4.0](https://10.0.3.254///compare/v1.3.6...v1.4.0) (2019-09-26)
 
 
