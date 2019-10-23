@@ -7,7 +7,7 @@ import tp from './index.html';
 const vConsole = new VConsole();
 const PUGLIN_ID = 'vconsole-atzuche-env';
 const PUGLIN_NAME = 'Planet';
-const COOKIE_ENV_NAME = '_app_vconsole_envname_';
+const COOKIE_ENV_NAME = '_app_envname_';
 const envs = [
   'Sun',
   'Mercury',
