@@ -1,6 +1,6 @@
 {
   "name": "vconsole-atzuche-env",
-  "version": "1.4.7",
+  "version": "1.4.8",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -24,7 +24,7 @@
   ],
   "dependencies": {
     "js-cookie": "^2.2.0",
-    "vconsole": "^3.3.2"
+    "vconsole": "3.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.0",

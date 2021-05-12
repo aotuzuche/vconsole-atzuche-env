@@ -5964,10 +5964,10 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vconsole@^3.3.2:
-  version "3.3.2"
-  resolved "https://registry.npmjs.org/vconsole/-/vconsole-3.3.2.tgz#07424f8de2e5e2586c504042093948435ed2de06"
-  integrity sha512-d5f6/q0U62Ojv5P7ROZy9TYP9te51v3QsuhNT0yZ0lZ+kN4R4rhYMpW5Y3FvYOerAhKkcnweiXQIZoKkziZEKg==
+vconsole@3.3.0:
+  version "3.3.0"
+  resolved "https://registry.nlark.com/vconsole/download/vconsole-3.3.0.tgz?cache=0&sync_timestamp=1620385445457&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fvconsole%2Fdownload%2Fvconsole-3.3.0.tgz#42629c07fb3b6a72733d2bbc417ee3e84b2bc76e"
+  integrity sha1-QmKcB/s7anJzPSu8QX7j6Esrx24=
 
 verror@1.10.0:
   version "1.10.0"
