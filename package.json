@@ -38,7 +38,7 @@
     "git-cz": "^3.2.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "4.0.0-alpha.2",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "sass-loader": "^7.1.0",
     "standard-version": "^6.0.1",
     "style-loader": "^0.23.1",
